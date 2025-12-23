@@ -61,7 +61,9 @@
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+    /* text-wrap: balance; - Fallback for older browsers */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -87,4 +89,3 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--muted-foreground) / 0.5);
 }
-

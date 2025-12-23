@@ -23,13 +23,13 @@ const staggerContainer = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-
+        
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial="initial"
@@ -37,8 +37,8 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-4xl mx-auto text-center"
           >
-            <motion.div
-              variants={fadeInUp}
+            <motion.div 
+              variants={fadeInUp} 
               className="mb-6"
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
@@ -172,7 +172,9 @@ export default function Home() {
                     <div className="mb-4">
                       <item.icon className="h-8 w-8 text-foreground" />
                     </div>
-                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                    <h3 className="font-semibold text-lg mb-2">
+                      {item.title}
+                    </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {item.description}
                     </p>
@@ -217,3 +219,4 @@ export default function Home() {
     </div>
   );
 }
+
