@@ -12,6 +12,8 @@ const navItems = [
   { label: "Sobre", href: "/sobre" },
   { label: "Atuação", href: "/atuacao" },
   { label: "Portfólio", href: "/portfolio" },
+  { label: "Hospitalidade+", href: "/hospitalidade" },
+  { label: "Método H+", href: "/metodo-h" },
   { label: "Diferenciais", href: "/diferenciais" },
   { label: "Contato", href: "/contato" },
 ];
@@ -36,7 +38,7 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-background/80 backdrop-blur-md shadow-sm"
+          ? "bg-background/90 backdrop-blur-md shadow-md border-b border-lime-400/15"
           : "bg-transparent"
       )}
     >
@@ -48,20 +50,14 @@ export function Navigation() {
               whileTap={{ scale: 0.95 }}
               className="font-serif text-2xl font-bold tracking-tight"
             >
-              <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                Duda Rocha
-              </span>
+              <span className="gradient-text">Duda Rocha</span>
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="relative group"
-              >
+              <Link key={item.href} href={item.href} className="relative group">
                 <motion.span
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -78,11 +74,7 @@ export function Navigation() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <Button
-                asChild
-                variant="default"
-                className="rounded-full"
-              >
+              <Button asChild variant="default" className="rounded-full">
                 <Link href="/contato">Vamos conversar</Link>
               </Button>
             </motion.div>
@@ -133,4 +125,3 @@ export function Navigation() {
     </motion.nav>
   );
 }
-

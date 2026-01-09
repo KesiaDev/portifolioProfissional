@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Instagram } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,10 +13,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="font-serif text-xl font-bold mb-4">Duda Rocha</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Transformando territórios através de projetos estratégicos em
-              cultura, turismo e marketing territorial.
+            <p className="text-sm text-muted-foreground leading-relaxed mb-2">
+              Cultura • Turismo • Desenvolvimento Territorial
             </p>
+            <p className="text-sm text-muted-foreground">RS – Brasil</p>
           </div>
 
           <div>
@@ -48,6 +48,22 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/hospitalidade"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Hospitalidade+
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/metodo-h"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Método H+
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/diferenciais"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -66,34 +82,27 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Conecte-se</h4>
-            <div className="flex gap-4">
+            <h4 className="font-semibold mb-4">Contato</h4>
+            <div className="space-y-3">
+              <motion.a
+                href="https://wa.me/5511999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <MessageCircle className="h-4 w-4" />
+                <span>WhatsApp</span>
+              </motion.a>
               <motion.a
                 href="mailto:contato@dudarocha.com"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-2 rounded-full border hover:bg-accent transition-colors"
-                aria-label="Email"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                <Mail className="h-5 w-5" />
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-2 rounded-full border hover:bg-accent transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="p-2 rounded-full border hover:bg-accent transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
+                <Mail className="h-4 w-4" />
+                <span>E-mail</span>
               </motion.a>
             </div>
           </div>
@@ -106,4 +115,3 @@ export function Footer() {
     </footer>
   );
 }
-

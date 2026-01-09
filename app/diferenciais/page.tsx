@@ -7,51 +7,44 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
-  Sparkles,
-  Target,
-  Users,
-  Award,
-  Heart,
-  Lightbulb,
+  FileText,
+  Building2,
+  Network,
+  GraduationCap,
+  CheckCircle,
   ArrowRight,
 } from "lucide-react";
 
 const diferenciais = [
   {
-    icon: Target,
-    title: "Visão Estratégica Integrada",
+    icon: FileText,
+    title: "Leitura Institucional Antes da Proposta",
     description:
-      "Não trabalho com projetos isolados. Cada iniciativa faz parte de uma visão maior que conecta cultura, turismo, economia e desenvolvimento social. Meu olhar estratégico garante que cada ação gere impacto duradouro e se alinhe aos objetivos de longo prazo do território.",
+      "Antes de qualquer entrega, analiso o contexto institucional do território: estrutura administrativa, limites legais, cenário político, atores envolvidos e grau de maturidade do projeto. Isso evita propostas inviáveis, conflitos desnecessários e iniciativas que não saem do papel.",
   },
   {
-    icon: Heart,
-    title: "Sensibilidade Cultural",
+    icon: Building2,
+    title: "Projetos que Dialogam com Políticas Públicas e Financiadores",
     description:
-      "Entendo que cada lugar tem uma identidade única. Minha abordagem respeita e valoriza as tradições locais, trabalhando com as comunidades de forma colaborativa. Não imponho soluções prontas, mas co-crio estratégias que fazem sentido para cada realidade.",
+      "Tenho experiência na estruturação de projetos alinhados a editais, leis de incentivo, programas públicos e critérios de avaliação de financiadores. Isso garante propostas consistentes, defensáveis e compatíveis com as exigências técnicas e formais de cada contexto.",
   },
   {
-    icon: Lightbulb,
-    title: "Inovação com Propósito",
+    icon: Network,
+    title: "Articulação entre Áreas, Pessoas e Interesses",
     description:
-      "Combino tradição e inovação de forma inteligente. Utilizo ferramentas modernas e metodologias inovadoras, sempre com foco em resultados reais e impacto positivo. Cada projeto é uma oportunidade de criar algo novo e transformador.",
+      "Territórios são construídos por relações. Atuo como ponte entre poder público, terceiro setor, iniciativa privada, universidades e comunidades locais, fortalecendo governança, reduzindo ruídos e ampliando a sustentabilidade das ações.",
   },
   {
-    icon: Users,
-    title: "Rede de Parceiros Estratégicos",
+    icon: GraduationCap,
+    title: "Educação como Estratégia Transversal",
     description:
-      "Trabalho com uma rede qualificada de parceiros em diferentes áreas - desde especialistas em políticas públicas até profissionais de comunicação e design. Isso me permite oferecer soluções completas e multidisciplinares.",
+      "Entendo cultura e turismo como processos educativos. Os projetos consideram tanto quem chega — promovendo aprendizagem e experiência — quanto quem permanece no território, fortalecendo identidade, pertencimento e capacidades locais.",
   },
   {
-    icon: Award,
-    title: "Excelência em Execução",
+    icon: CheckCircle,
+    title: "Compromisso com Entrega e Responsabilidade",
     description:
-      "Do planejamento à execução, acompanho cada etapa com atenção aos detalhes. Meu compromisso é com a excelência em cada projeto, garantindo que as estratégias sejam implementadas com qualidade e gerem os resultados esperados.",
-  },
-  {
-    icon: Sparkles,
-    title: "Resultados Mensuráveis",
-    description:
-      "Não trabalho apenas com ideias bonitas. Desenvolvo projetos com objetivos claros, indicadores de sucesso e acompanhamento de resultados. Você saberá exatamente o que foi entregue e qual o impacto gerado.",
+      "Trabalho com cronogramas realistas, definição clara de responsabilidades, acompanhamento de execução e foco em resultados possíveis de serem comprovados. O objetivo não é apenas lançar projetos, mas garantir que funcionem e deixem estruturas ativas no território.",
   },
 ];
 
@@ -70,12 +63,12 @@ export default function DiferenciaisPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
-              Por que escolher Duda Rocha?
+              Por que trabalhar comigo
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Mais que uma profissional, uma parceira estratégica que entende
-              que transformar territórios vai além de criar projetos. É sobre
-              construir legados.
+              Mais do que executar projetos, atuo como parceira estratégica de
+              instituições, governos e organizações que precisam transformar
+              ideias em ações viáveis, sustentáveis e legitimadas no território.
             </p>
           </motion.div>
         </div>
@@ -114,80 +107,6 @@ export default function DiferenciaisPage() {
         </div>
       </section>
 
-      {/* Approach Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12"
-            >
-              <h2 className="font-serif text-4xl font-bold mb-4">
-                Minha Abordagem Única
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Cada projeto é uma jornada colaborativa de transformação
-              </p>
-            </motion.div>
-
-            <div className="space-y-8">
-              {[
-                {
-                  step: "01",
-                  title: "Escuta Profunda",
-                  description:
-                    "Começo mergulhando na realidade do território. Entendo sua história, cultura, desafios e potencialidades. Não assumo nada - descubro tudo através de pesquisa, conversas e imersão.",
-                },
-                {
-                  step: "02",
-                  title: "Estratégia Personalizada",
-                  description:
-                    "Com base no que descobri, desenvolvo uma estratégia única para seu território. Não uso templates - cada solução é pensada especificamente para suas necessidades e objetivos.",
-                },
-                {
-                  step: "03",
-                  title: "Execução com Cuidado",
-                  description:
-                    "Acompanho cada etapa da execução com atenção aos detalhes. Trabalho em parceria com sua equipe, garantindo que tudo seja implementado com excelência e alinhado à visão estratégica.",
-                },
-                {
-                  step: "04",
-                  title: "Legado Duradouro",
-                  description:
-                    "Meu objetivo não é apenas entregar um projeto, mas criar algo que continue gerando valor. Desenvolvo capacidades locais e estruturas que garantem a sustentabilidade dos resultados.",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={item.step}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex gap-6"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full bg-foreground text-background flex items-center justify-center font-bold text-xl">
-                      {item.step}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-xl mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
@@ -199,15 +118,17 @@ export default function DiferenciaisPage() {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="font-serif text-4xl font-bold mb-4">
-              Pronto para transformar seu território?
+              Vamos estruturar seu projeto com coerência e impacto real?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Vamos conversar sobre como posso ajudar você a criar algo
-              extraordinário.
+              Se você precisa qualificar uma ideia, viabilizar um projeto ou
+              estruturar uma ação com responsabilidade institucional, impacto
+              territorial e alinhamento estratégico, uma boa conversa é sempre o
+              melhor ponto de partida.
             </p>
             <Button asChild size="lg" className="rounded-full">
               <Link href="/contato">
-                Iniciar conversa
+                👉 Conversar sobre seu projeto
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -219,4 +140,3 @@ export default function DiferenciaisPage() {
     </div>
   );
 }
-

@@ -10,6 +10,7 @@ import {
   MapPin,
   TrendingUp,
   Briefcase,
+  GraduationCap,
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
@@ -18,10 +19,66 @@ import Link from "next/link";
 
 const areas = [
   {
+    id: "projetos-estrategicos",
+    icon: Briefcase,
+    title: "Projetos Estratégicos e Institucionais",
+    subtitle: "Transformando visões em realidade",
+    description:
+      "Desenvolvimento, estruturação e execução de projetos estratégicos de médio e longo prazo, articulando diferentes instituições, escalas territoriais e interesses públicos e privados.",
+    problems: [
+      "Falta de visão estratégica integrada",
+      "Projetos fragmentados sem conexão",
+      "Dificuldade em captar recursos",
+      "Ausência de planejamento de longo prazo",
+    ],
+    solutions: [
+      "Planejamento estratégico integrado e multidisciplinar",
+      "Desenvolvimento de projetos estruturantes",
+      "Elaboração de propostas para captação de recursos",
+      "Acompanhamento e gestão de projetos complexos",
+    ],
+    impact:
+      "Territórios com visão clara de futuro, projetos estruturantes implementados, recursos captados e transformação efetiva da realidade local.",
+    forWho: [
+      "Prefeituras e governos",
+      "Instituições públicas e privadas",
+      "Organizações do terceiro setor",
+      "Empresas com projetos de impacto territorial",
+    ],
+  },
+  {
+    id: "turismo",
+    icon: MapPin,
+    title: "Turismo",
+    subtitle: "Criando experiências conectadas ao território",
+    description:
+      "Planejamento e desenvolvimento do turismo a partir da identidade cultural, da memória e das vocações locais, compreendendo o turismo como experiência pedagógica que ensina, sensibiliza e gera pertencimento.",
+    problems: [
+      "Falta de identidade turística clara",
+      "Ausência de roteiros e experiências diferenciadas",
+      "Baixa atratividade do destino",
+      "Pouca integração entre atrativos e serviços",
+    ],
+    solutions: [
+      "Desenvolvimento de estratégias de posicionamento turístico",
+      "Criação de roteiros temáticos e experiências autênticas",
+      "Planejamento de eventos e festivais que atraem visitantes",
+      "Integração entre cultura, gastronomia, natureza e história",
+    ],
+    impact:
+      "Aumento do fluxo turístico, geração de emprego e renda, valorização dos atrativos locais e criação de uma marca territorial forte e desejada.",
+    forWho: [
+      "Prefeituras e secretarias de turismo",
+      "Associações e consórcios turísticos",
+      "Hotéis e pousadas",
+      "Operadoras de turismo",
+    ],
+  },
+  {
     id: "cultura",
     icon: Palette,
     title: "Cultura",
-    subtitle: "Valorizando identidades e transformando comunidades",
+    subtitle: "Valorizando identidades e memória",
     description:
       "Projetos culturais que conectam passado e presente, valorizam tradições e criam novas narrativas. Desenvolvimento de políticas culturais, curadorias, festivais e iniciativas que fortalecem a identidade territorial.",
     problems: [
@@ -46,38 +103,37 @@ const areas = [
     ],
   },
   {
-    id: "turismo",
-    icon: MapPin,
-    title: "Turismo",
-    subtitle: "Criando experiências memoráveis e destinos desejados",
+    id: "educacao-mediacao",
+    icon: GraduationCap,
+    title: "Educação e Mediação Cultural",
+    subtitle: "Turismo, cultura e aprendizagem no território",
     description:
-      "Desenvolvimento de estratégias turísticas que transformam territórios em destinos únicos. Criação de roteiros, experiências autênticas e posicionamento que destaca o que cada lugar tem de mais especial.",
+      "Desenvolvimento de ações educativas, formativas e de mediação cultural que conectam turismo, cultura e território, promovendo aprendizagem, pertencimento e qualificação da experiência tanto para visitantes quanto para comunidades locais.",
     problems: [
-      "Falta de identidade turística clara",
-      "Ausência de roteiros e experiências diferenciadas",
-      "Baixa atratividade do destino",
-      "Pouca integração entre atrativos e serviços",
+      "Turismo desconectado da história local",
+      "Comunidades pouco envolvidas nos projetos",
+      "Ausência de ações formativas associadas ao turismo",
     ],
     solutions: [
-      "Desenvolvimento de estratégias de posicionamento turístico",
-      "Criação de roteiros temáticos e experiências autênticas",
-      "Planejamento de eventos e festivais que atraem visitantes",
-      "Integração entre cultura, gastronomia, natureza e história",
+      "Concepção de workshops e formações",
+      "Mediação cultural em projetos territoriais",
+      "Produção de conteúdo educativo e editorial",
+      "Integração entre pesquisa acadêmica e prática territorial",
     ],
     impact:
-      "Aumento do fluxo turístico, geração de emprego e renda, valorização dos atrativos locais e criação de uma marca territorial forte e desejada.",
+      "Territórios mais conscientes de sua identidade, visitantes qualificados e projetos turísticos com maior densidade cultural.",
     forWho: [
-      "Prefeituras e secretarias de turismo",
-      "Associações e consórcios turísticos",
-      "Hotéis e pousadas",
-      "Operadoras de turismo",
+      "Prefeituras",
+      "Instituições culturais e educacionais",
+      "Universidades",
+      "Projetos de turismo pedagógico",
     ],
   },
   {
     id: "marketing-territorial",
     icon: TrendingUp,
     title: "Marketing Territorial",
-    subtitle: "Posicionando territórios como marcas desejadas",
+    subtitle: "Comunicação como estratégia de desenvolvimento",
     description:
       "Estratégias de marketing que transformam lugares em marcas fortes e desejadas. Desenvolvimento de identidade visual, narrativas estratégicas e posicionamento que destaca diferenciais competitivos.",
     problems: [
@@ -101,34 +157,6 @@ const areas = [
       "Empresas com foco em desenvolvimento territorial",
     ],
   },
-  {
-    id: "projetos-estrategicos",
-    icon: Briefcase,
-    title: "Projetos Estratégicos e Institucionais",
-    subtitle: "Transformando visões em realidade",
-    description:
-      "Desenvolvimento de projetos estratégicos complexos que unem múltiplas áreas e geram impacto transformador. Planejamento, execução e acompanhamento de iniciativas que mudam a realidade de territórios.",
-    problems: [
-      "Falta de visão estratégica integrada",
-      "Projetos fragmentados sem conexão",
-      "Dificuldade em captar recursos",
-      "Ausência de planejamento de longo prazo",
-    ],
-    solutions: [
-      "Planejamento estratégico integrado e multidisciplinar",
-      "Desenvolvimento de projetos estruturantes",
-      "Elaboração de propostas para captação de recursos",
-      "Acompanhamento e gestão de projetos complexos",
-    ],
-    impact:
-      "Territórios com visão clara de futuro, projetos estruturantes implementados, recursos captados e transformação efetiva da realidade local.",
-    forWho: [
-      "Prefeituras e governos",
-      "Instituições públicas e privadas",
-      "Organizações do terceiro setor",
-      "Empresas com projetos de impacto territorial",
-    ],
-  },
 ];
 
 export default function AtuacaoPage() {
@@ -149,9 +177,10 @@ export default function AtuacaoPage() {
               Áreas de Atuação
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Soluções estratégicas em cultura, turismo, marketing territorial
-              e projetos institucionais. Cada área trabalhada com expertise,
-              sensibilidade e visão de futuro.
+              Atuação profissional em cultura, turismo, educação e marketing
+              territorial, compreendendo o turismo como prática pedagógica, a
+              cultura como mediação simbólica e os projetos institucionais como
+              instrumentos de desenvolvimento territorial.
             </p>
           </motion.div>
         </div>
@@ -160,17 +189,20 @@ export default function AtuacaoPage() {
       {/* Areas Tabs */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <Tabs defaultValue="cultura" className="max-w-6xl mx-auto">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-12 h-auto p-1 bg-muted/50">
+          <Tabs
+            defaultValue="projetos-estrategicos"
+            className="max-w-6xl mx-auto"
+          >
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-12 h-auto p-1 bg-gradient-to-r from-black/80 via-lime-500/10 to-green-500/10 border border-lime-400/20">
               {areas.map((area) => (
                 <TabsTrigger
                   key={area.id}
                   value={area.id}
-                  className="data-[state=active]:bg-background data-[state=active]:shadow-sm py-4"
+                  className="data-[state=active]:bg-gradient-to-br data-[state=active]:from-lime-500/20 data-[state=active]:to-green-500/20 data-[state=active]:border-lime-400/40 data-[state=active]:shadow-lg data-[state=active]:shadow-lime-500/20 py-3 px-1.5 h-auto border border-transparent hover:border-lime-400/20 transition-all [&[data-state=active]_svg]:text-lime-400 [&[data-state=active]_span]:text-lime-400"
                 >
-                  <div className="flex flex-col items-center gap-2">
-                    <area.icon className="h-5 w-5" />
-                    <span className="text-xs md:text-sm font-medium">
+                  <div className="flex flex-col items-center gap-1.5 w-full min-w-0">
+                    <area.icon className="h-4 w-4 md:h-5 md:w-5 flex-shrink-0 text-gray-300 transition-colors" />
+                    <span className="text-[10px] md:text-xs font-medium text-center leading-tight break-words w-full text-gray-300 transition-colors">
                       {area.title}
                     </span>
                   </div>
@@ -317,4 +349,3 @@ export default function AtuacaoPage() {
     </div>
   );
 }
-
